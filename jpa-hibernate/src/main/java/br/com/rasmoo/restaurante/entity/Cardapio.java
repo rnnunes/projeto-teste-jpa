@@ -24,6 +24,9 @@ public class Cardapio {
     private Boolean disponivel;
     private BigDecimal valor;
 
+    @ManyToOne
+    private Categoria categoria;
+
     @Column(name = "data_de_registro")
     private LocalDateTime dataRegistro = LocalDateTime.now();
 
