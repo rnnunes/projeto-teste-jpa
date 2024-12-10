@@ -52,16 +52,17 @@ public class CardapioService {
         cardapioDao.cadastrar(risoto);
         entityManager.flush();
         cardapioDao.cadastrar(salmao);
+        entityManager.flush();
 
 
 //        cardapioDao.excluir(risoto);
 
-        System.out.println("O prato consultado foi: " + cardapioDao.consultar(16));
-
+//        System.out.println("O prato consultado foi: " + cardapioDao.consultarPorID(16));
 //        risoto.setValor(BigDecimal.valueOf(75.60));
 //        cardapioDao.atualizar(risoto);
+//        System.out.println("O prato consultado foi: " + cardapioDao.consultarPorID(1));
 
-        System.out.println("O prato consultado foi: " + cardapioDao.consultar(1));
+        cardapioDao.ConsultarTodos().forEach(elemento-> System.out.println("O prato consultado foi: " + elemento));
         entityManager.close();
 
 
